@@ -56,6 +56,19 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.username
 
+class Address(models.Model):
+    full_name = models.CharField("Full Name",max_length=50)
+    phone_number = models.CharField("Phone Number",max_length=15,blank=True,null=True)
+    postal_code = models.CharField("Postal Code",max_length=12)
+    unit_number = models.CharField("Unit Number",max_length=10)
+    house_number = models.CharField("House Number",max_length=10)
+    building = models.CharField("Building",max_length=30)
+    street_name = models.CharField("Street Name",max_length=30)
+
+    class Meta:
+        abstract = False
+        verbose_name = "Shipping Address"
+
 # class Customer(models.Model):
 #     GENDER_CHOICES = (
 #         ('M','Male'),
