@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'maimai.apps.MaimaiConfig',
+    'product.apps.ProductConfig',
+    'djmoney',
 ]
 
 MIDDLEWARE = [
