@@ -7,15 +7,22 @@ class Category(MPTTModel):
   name = models.CharField(max_length=50)
   parent = TreeForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
 
+class Brand(models.Model):
+  id = models.AutoField(primary_key=True)
+  name = models.CharField(max_length=255)
+  category = models.ManyToManyField(Category,null=True)
+
 class Listing(models.Model):
   id = models.AutoField(primary_key=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
   new_condition = models.BooleanField()
-  category = models.ForeignKey(Category, on_delete=models.PROTECT, default=1)
+  category = models.ForeignKey(Category, on_delete=models.PROTECT, null=True)
+  brand = models.ForeignKey(Brand,on_delete=models.PROTECT,null=True)
 
 class Stock_Keeping_Unit:
   id = models.AutoField(primary_key=True)
   price = MoneyField(default=0, default_currency='SGD')
   stock = models.PositiveIntegerField()
   variant = JSONField()
+
