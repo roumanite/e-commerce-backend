@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'maimai.apps.MaimaiConfig',
     'product.apps.ProductConfig',
     'djmoney',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
