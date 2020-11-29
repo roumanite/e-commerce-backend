@@ -68,27 +68,3 @@ class Address(models.Model):
     class Meta:
         abstract = False
         verbose_name = "Shipping Address"
-
-# class Customer(models.Model):
-#     GENDER_CHOICES = (
-#         ('M','Male'),
-#         ('F','Female'),
-#     )
-#     USERNAME_FIELD = 'email'
-#     REQUIRED_FIELDS = ('username','password,','first_name','last_name','email','gender','birthday')
-#
-#     username = models.CharField(error_messages={'unique': 'A user with that username already exists.'},
-#                                 verbose_name='Username', max_length=20,
-#                                 #help_text='20 characters or fewer. Letters, digits and @/./+/-/_ characters only.',
-#                                 unique=True, validators=[django.core.validators.RegexValidator('^[\\w.@+-]+$',
-#                                                                                                'Enter a valid username. This may only contain letters, digits, and @/./+/-/_ characters.',
-#                                                                                                'invalid')])
-#     password = models.CharField(verbose_name='password', max_length=128)
-#     first_name = models.CharField(verbose_name='first Name',max_length=30)
-#     last_name = models.CharField(verbose_name='last Name',max_length=30)
-#     email = models.EmailField(verbose_name='email',max_length=254)
-#     gender = models.CharField(verbose_name='gender',max_length=1,choices=GENDER_CHOICES)
-#     birthday = models.DateField(verbose_name='Birthday',null=True,blank=True)
-#
-#     def __str__(self):
-#         return self.username

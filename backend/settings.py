@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'maimai.apps.MaimaiConfig',
+    'user.apps.UserConfig',
     'product.apps.ProductConfig',
     'djmoney',
     'rest_framework'
@@ -96,7 +96,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         # 'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-        'NAME': 'maimai.validators.MinimumLengthValidator',
+        'NAME': 'user.validators.MinimumLengthValidator',
         'OPTIONS': {
             'min_length': 8,
         }
@@ -129,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = 'maimai.CustomUser'
+AUTH_USER_MODEL = 'user.CustomUser'
 
 LOGIN_REDIRECT_URL = 'home'
 

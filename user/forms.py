@@ -23,23 +23,3 @@ class CustomUserChangeForm(UserChangeForm):
         #     'confirm_password': forms.PasswordInput(),
         # }
         fields = ('username','first_name','last_name','email','gender','birthday')
-
-# class CustomerCreationForm(forms.ModelForm):
-#     # password = forms.CharField(widget=forms.PasswordInput)
-#     # confirm_password = forms.CharField(widget=forms.PasswordInput)
-#     class Meta:
-#         model = Customer
-#         widgets = {
-#             'password': forms.PasswordInput(),
-#         }
-#         fields = ('username','email','password')
-#
-# class CustomerChangeForm(forms.ModelForm):
-#     # password = forms.CharField(widget=forms.PasswordInput)
-#     # confirm_password = forms.CharField(widget=forms.PasswordInput)
-#     class Meta:
-#         model = Customer
-#         widgets = {
-#             'password': forms.PasswordInput(),
-#         }
-#         fields = ('username','email','password',)
